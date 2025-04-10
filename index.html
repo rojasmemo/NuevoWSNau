@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Entrada - Boceto</title>
+
+    <!-- Enlace a Google Fonts (se mantiene) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Enlace al CSS compilado por Tailwind (NUEVO) -->
+    <link href="styles/output.css" rel="stylesheet">
+
+    <!-- Los scripts del CDN, la config inline, styles.css y el <style> han sido eliminados -->
+</head>
+<body class="font-sans">
+
+    <!-- Cabecera (Se mantiene intacta) -->
+    <header class="bg-custom-light-teal text-custom-darker-teal shadow-md h-[151px]">
+        <!-- Contenedor interno para centrado, padding y layout flex -->
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-10 h-full">
+            <!-- Logo Original -->
+            <a href="index.html">
+                <!-- Asegúrate que esta ruta y nombre de archivo son correctos -->
+                <img src="images/LOGO-NAU-WEB.webp" alt="Logo de Nau">
+            </a>
+            <!-- Menú de Navegación Original -->
+            <nav>
+                <!-- Clases originales del UL para layout y alineación -->
+                <ul class="flex flex-wrap space-x-5 items-center h-full">
+                    <!-- Enlaces con estilo original usando utilidades -->
+                    <!-- Enlace activo (Inicio) -->
+                    <li><a href="index.html" class="font-semibold text-custom-darker-teal transition-colors duration-300 hover:text-[#d1e3e5]">Inicio</a></li>
+                    <!-- Enlaces inactivos (usando text-white y hover) -->
+                    <li><a href="sobre-nau.html" class="font-semibold text-white transition-colors duration-300 hover:text-[#d1e3e5]">Sobre Nau</a></li>
+                    <li><a href="servicios.html" class="font-semibold text-white transition-colors duration-300 hover:text-[#d1e3e5]">Servicios</a></li>
+                    <li><a href="campanas.html" class="font-semibold text-white transition-colors duration-300 hover:text-[#d1e3e5]">Campañas</a></li>
+                    <!-- Botón "Dona ahora" (ya usaba utilidades) -->
+                    <li>
+                        <a href="donar.html" class="bg-[#005366] text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-[#005366] transition duration-300">
+                            Dona ahora
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal (NUEVO - Reemplazado según tu solicitud) -->
+    <main>
+        <!-- Sección Hero 1 -->
+        <section class="hero-bg bg-custom-medium-teal text-white py-16 md:py-24 px-4 text-center" style="background-image: url('images/1-BANNER-NAU-WEB.webp');">
+            <div class="container mx-auto">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Despiértate. Conéctate. Transforma tu vida </h1>
+                <p class="text-lg mb-2 max-w-2xl mx-auto">Tu esencia es más grande que tus miedos.</p>
+                <p class="text-lg mb-3 max-w-2xl mx-auto">Rompe los bloqueos que te limitan y descubre la paz de ser tú mismo.</p>
+                <button class="bg-[#005366] text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-[#005366] transition duration-300">
+                    Quiero saber más
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de contenido 1 MODIFICADA -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-start h-full">
+                <div class="bg-white py-8 pr-8 pl-20 rounded-lg flex flex-col justify-center h-full">
+                    <div>
+                        <h2 class="font-bold text-[35px] text-[#005366] mb-4">¿Sientes que algo te frena?</h2>
+                        <p class="font-normal text-[22px] text-custom-darker-teal mb-4">
+                            A veces, la vida se siente como un ciclo repetitivo: dudas, miedos y emociones que pesan. Tal vez no sabes qué te detiene, pero sientes que hay algo más allá de ese estado. Algo en ti sabe que es momento de cambiar.
+                        </p>
+                        <p class="font-bold text-[22px] text-custom-darker-teal">
+                            ¡Haz espacio para tu transformación!
+                        </p>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden h-full flex justify-center items-center">
+                    <img src="images/2-BANNER-NAU-WEB.webp"
+                         alt="Persona meditando al aire libre conectando con su esencia"
+                         class="w-[70%] h-auto object-contain rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Hero 2 MODIFICADA -->
+        <section class="hero-bg bg-custom-dark-teal text-white py-16 md:py-24 px-4 text-center" style="background-image: url('images/3-BANNER-NAU-WEB.webp');">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold">No estás solo en este proceso,</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">la transformación no ocurre en soledad.</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Te acompañamos de cerca. Nuestros especialistas te ayudarán a vivir con más serenidad, propósito y conexión.</p>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Tu camino es único. Nosotros solo te ayudamos a verlo con más claridad.</p>
+     <button class="bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 transition duration-300">
+                    Descubre cómo te acompañamos
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de contenido 2 -->
+        <section class="py-16 px-4 bg-[#b3dddd]">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal">Hemos diseñado</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal mb-12">experiencias y herramientas transformadoras:</h2>
+                <div class="grid md:grid-cols-2 gap-8 mb-8 px-24">
+                    <div class="relative bg-white p-8 rounded-lg shadow-md text-custom-darker-teal">
+                        <img src="images/4-BANNER-NAU-WEB.webp" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-16"> <!-- Ajusta h-16 (altura) si es necesario -->
+                        <h3 class="text-2xl font-semibold mt-8 mb-3 text-custom-darker-teal">ENCUENTROS</h3>
+                        <ul class="list-disc list-inside space-y-1 text-[#143946] text-left pl-12">
+                            <li>Trabajar por ti y para ti</li>
+                            <li>Retorno a lo femenino y masculino</li>
+                            <li>Relación padres e hijos</li>
+                            <li>Relaciones de pareja</li>
+                        </ul>
+                    </div>
+                    <!-- Contenedor 2: Añadir 'relative' e 'img' -->
+                    <div class="relative bg-white p-8 rounded-lg shadow-md text-custom-darker-teal">
+                        <img src="images/4-BANNER-NAU-WEB.webp" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-16"> <!-- Ajusta h-16 (altura) si es necesario -->
+                        <h3 class="text-2xl font-semibold mt-8 mb-3 text-custom-darker-teal">SIMBOLISMO NUMÉRICO</h3>
+                        <ul class="list-disc list-inside space-y-1 text-[#143946] text-left pl-12">
+                            <li>Lección de vida</li>
+                            <li>Número del alma</li>
+                            <li>Número de personalidad externa</li>
+                            <li>Número de la vía del destino</li>
+                            <li>Año personal</li>
+                            <li>El Triángulo Divino</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-custom-darker-teal">Inicia tu transformación con nosotros.</h3>
+                <button class="bg-[#005366] text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-[#005366] transition duration-300">
+                    Conoce más
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de contenido 3 -->
+        <section class="py-16 px-4 bg-white">
+             <div class="container mx-auto text-center text-custom-darker-teal mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-light-teal">¿Qué pasa si sigues esperando</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-light-teal mb-12">el momento perfecto?</h2>
+            </div>
+            <div class="container mx-auto grid md:grid-cols-2 gap-2 items-center px-16">
+                 <!-- Contenedor Izquierdo (Imagen) -->
+                 <div class="bg-white rounded-lg flex justify-end items-center h-64 md:h-80">
+                     <img src="images/5-BANNER-NAU-WEB.webp"
+                          alt="Persona mirando reflexivamente hacia el futuro"
+                          class="scale-[.9]">
+                </div>
+                 <!-- Contenedor Derecho (Texto) -->
+                 <div class="bg-white text-custom-darker-teal p-8 rounded-lg text-center flex flex-col justify-center items-start h-64 md:h-80">
+                    <p class="text-xl text-left mb-4">El tiempo sigue pasando. Las mismas dudas, los mismos miedos. La transformación no llega sola, requiere un acto de valentía.</p>
+                    <p class="text-xl text-left mb-6">Hoy puedes elegir soltar lo que te limita y abrirte a una vida más auténtica.</p>
+                    <p class="font-bold text-custom-dark-teal text-2xl text-left mb-4">Atrévete al cambio,</p>
+                    <p class="font-bold text-custom-dark-teal text-2xl text-left">¡EL MOMENTO ES AHORA!</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Sección Hero 3 -->
+
+        <section class="hero-bg bg-custom-medium-teal text-white py-16 md:py-24 px-4 text-center" style="background-image: url('images/6-BANNER-NAU-WEB.webp');">
+            <div class="container mx-auto">
+                <p class="text-lg max-w-2xl mx-auto">Imagina vivir sin las cargas del pasado, sin miedo a avanzar. Imagina</p>
+                <p class="text-lg max-w-2xl mx-auto mb-4">despertar cada día en paz contigo, con claridad y propósito.</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Esa vida es posible. La pregunta es:</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿estás list@ para comenzarla?</h2>
+     <button class="bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 transition duration-300">
+                    Empieza aquí
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página (NUEVO - Reemplazado según tu solicitud) -->
+    <footer class="bg-custom-light-teal text-custom-darker-teal">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 items-center px-10 bg-custom-darker-teal text-white h-60 p-4">
+            <img src="images/LOGO-FOOTER-NAU-WEB.webp" alt="Logo de Nau" class="md:col-span-1">
+            <div class="md:col-span-1 text-sm">
+                <h2 class="font-semibold mb-2">Contáctanos</h2>
+                <ul>
+                    <li>Móvil: +57 300 542 9620</li>
+                    <li>Email: naufundacion@gmail.com</li>
+                </ul>
+            </div>
+            <div class="md:col-span-1 text-sm">
+                <h2 class="font-semibold mb-2">Síguenos</h2>
+                <p>Instagram</p> <!-- Asumo que aquí irá un enlace o icono de Instagram -->
+            </div>
+            <div class="md:col-span-1 text-sm flex items-end"> <!-- Ajustado para alinear al final si es necesario -->
+                <ul>
+                    <li>Si conectas con nuestro propósito,</li>
+                    <li>te invitamos a donar</li>
+                    <li><button class="bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 transition duration-300 mt-2">Dona ahora</button></li> <!-- Añadí un margen superior al botón -->
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-sm copyright-notice bg-custom-light-teal header-text text-custom-darker-teal font-normal py-4"> <!-- Añadí padding vertical -->
+            © 2025 Fundación Nau. Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+</html>
