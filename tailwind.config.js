@@ -17,6 +17,8 @@ module.exports = {
         'custom-dark-teal': '#1E606A',  // Teal oscuro
         'custom-darker-teal': '#143946', // Teal muy oscuro (para texto/imágenes)
         'custom-specific-blue': '#005366',
+        'custom-hover-teal': '#d1e3e5', // Este es el color del hover del menú
+        'custom-pale-teal': '#b3dddd',  // El color de fondo correcto para la sección de contenido 2
       }
     },
   },

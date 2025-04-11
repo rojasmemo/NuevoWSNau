@@ -4,121 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre NAU: te ayudamos a conectar con tu esencia, romper bloqueos y transformar tu vida a través de encuentros y simbolismo numérico.">
     <title>NAU</title>
-
-    <!-- Enlace a Google Fonts (se mantiene) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Enlace al CSS compilado por Tailwind (NUEVO) -->
     <link href="styles/output.css" rel="stylesheet">
-
-    <!-- Los scripts del CDN, la config inline, styles.css y el <style> han sido eliminados -->
 </head>
 <body class="font-sans">
 
-    <!-- Cabecera (Se mantiene intacta) -->
-    <header class="bg-custom-light-teal text-custom-darker-teal shadow-md h-[151px]">
-        <!-- Contenedor interno para centrado, padding y layout flex -->
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-10 h-full">
-            <!-- Logo Original -->
-            <a href="index.html">
-                <!-- Asegúrate que esta ruta y nombre de archivo son correctos -->
-                <img src="images/LOGO-NAU-WEB.webp" alt="Logo de Nau">
+    <!-- Cabecera Responsiva -->
+    <!-- Ajustamos altura, padding y comportamiento flex para móvil -->
+    <header class="bg-custom-light-teal text-custom-darker-teal shadow-md min-h-[80px] md:h-[151px]">
+        <!-- Cambiado a flex-col en móvil, flex-row en md+. Padding ajustado. -->
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-10 py-4 md:py-0">
+            <!-- Logo con tamaño ajustado opcionalmente en móvil -->
+            <a href="index.html" class="mb-4 md:mb-0">
+                <img src="images/LOGO-NAU-WEB.webp" alt="Logo de Nau" class="h-12 md:h-auto"> <!-- Ajusta h-12 si es necesario -->
             </a>
-            <!-- Menú de Navegación Original -->
-            <nav>
-                <!-- Clases originales del UL para layout y alineación -->
-                <ul class="flex flex-wrap space-x-5 items-center h-full">
-                    <!-- Enlaces con estilo original usando utilidades -->
-                    <!-- Enlace activo (Inicio) -->
-                    <li><a href="index.html" class="font-semibold text-custom-darker-teal transition-colors duration-300 hover:text-[#d1e3e5]">Inicio</a></li>
-                    <!-- Enlaces inactivos (usando text-white y hover) -->
-                    <li><a href="sobre-nau.html" class="font-semibold text-white transition-colors duration-300 hover:text-[#d1e3e5]">Sobre Nau</a></li>
-                    <li><a href="servicios.html" class="font-semibold text-white transition-colors duration-300 hover:text-[#d1e3e5]">Servicios</a></li>
-                    <li><a href="campanas.html" class="font-semibold text-white transition-colors duration-300 hover:text-[#d1e3e5]">Campañas</a></li>
-                    <!-- Botón "Dona ahora" (ya usaba utilidades) -->
-                    <li>
-                        <a href="donar.html" class="bg-[#005366] text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-[#005366] transition duration-300">
+            <!-- Navegación: Oculta en móvil (requiere JS para botón hamburguesa) o simplificada -->
+            <!-- Opción Simple (sin JS): Apilar enlaces -->
+             <nav>
+                 <!-- Ajustado flex-wrap, centrado y espaciado para móvil -->
+                <ul class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-5 items-center text-center md:text-left">
+                    <li><a href="index.html" aria-current="page" class="font-semibold text-custom-darker-teal transition-colors duration-300 block py-1">Inicio</a></li>
+                    <li><a href="sobre-nau.html" class="font-semibold text-white transition-colors duration-300 hover:text-custom-hover-teal block py-1">Sobre Nau</a></li>
+                    <li><a href="servicios.html" class="font-semibold text-white transition-colors duration-300 hover:text-custom-hover-teal block py-1">Servicios</a></li>
+                    <li><a href="campanas.html" class="font-semibold text-white transition-colors duration-300 hover:text-custom-hover-teal block py-1">Campañas</a></li>
+                    <li class="mt-2 md:mt-0">
+                        <a href="donar.html" class="bg-custom-dark-teal text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-custom-dark-teal transition duration-300 inline-block">
                             Dona ahora
                         </a>
                     </li>
                 </ul>
             </nav>
+            <!-- NOTA: Para un menú hamburguesa real, ocultarías <nav> en móvil (md:block) y añadirías un botón (block md:hidden) con JS para mostrar/ocultar el menú. -->
         </div>
     </header>
 
-    <!-- Contenido principal (NUEVO - Reemplazado según tu solicitud) -->
+    <!-- Contenido principal -->
     <main>
         <!-- Sección Hero 1 -->
-        <section class="hero-bg bg-custom-medium-teal text-white py-16 md:py-24 px-4 text-center" style="background-image: url('images/1-BANNER-NAU-WEB.webp');">
+        <!-- Ajustado padding vertical -->
+        <section class="hero-bg bg-custom-medium-teal text-white py-12 md:py-16 lg:py-24 px-4 text-center" style="background-image: url('images/1-BANNER-NAU-WEB.webp');">
             <div class="container mx-auto">
+                <!-- Tamaños de fuente ya responsivos -->
                 <h1 class="text-3xl md:text-4xl font-bold mb-4">Despiértate. Conéctate. Transforma tu vida </h1>
                 <p class="text-lg mb-2 max-w-2xl mx-auto">Tu esencia es más grande que tus miedos.</p>
                 <p class="text-lg mb-3 max-w-2xl mx-auto">Rompe los bloqueos que te limitan y descubre la paz de ser tú mismo.</p>
-                <button class="bg-[#005366] text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-[#005366] transition duration-300">
+                <a href="#experiencias" class="inline-block bg-custom-dark-teal text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-custom-dark-teal transition duration-300">
                     Quiero saber más
-                </button>
+                </a>
             </div>
         </section>
 
-        <!-- Sección de contenido 1 MODIFICADA -->
-        <section class="py-16 px-4 bg-white">
-            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-start h-full">
-                <div class="bg-white py-8 pr-8 pl-20 rounded-lg flex flex-col justify-center h-full">
+        <!-- Sección de contenido 1 -->
+        <!-- Padding ajustado -->
+        <section class="py-12 md:py-16 px-4 bg-white">
+            <!-- Grid ya es responsivo (apila en móvil, 2 cols en md+) -->
+            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center"> <!-- Cambiado items-start a items-center para mejor alineación vertical -->
+                <!-- Padding ajustado para móvil -->
+                <div class="bg-white p-4 md:py-8 md:pr-8 md:pl-20 rounded-lg flex flex-col justify-center order-2 md:order-1"> <!-- Orden cambiado para imagen arriba en móvil -->
                     <div>
-                        <h2 class="font-bold text-[35px] text-[#005366] mb-4">¿Sientes que algo te frena?</h2>
-                        <p class="font-normal text-[22px] text-custom-darker-teal mb-4">
+                        <!-- Tamaño de fuente ajustado para móvil -->
+                        <h2 class="font-bold text-3xl md:text-[35px] text-custom-dark-teal mb-4">¿Sientes que algo te frena?</h2>
+                        <!-- Tamaño de fuente ajustado para móvil -->
+                        <p class="font-normal text-lg md:text-[22px] text-custom-darker-teal mb-4">
                             A veces, la vida se siente como un ciclo repetitivo: dudas, miedos y emociones que pesan. Tal vez no sabes qué te detiene, pero sientes que hay algo más allá de ese estado. Algo en ti sabe que es momento de cambiar.
                         </p>
-                        <p class="font-bold text-[22px] text-custom-darker-teal">
+                        <!-- Tamaño de fuente ajustado para móvil -->
+                        <p class="font-bold text-lg md:text-[22px] text-custom-darker-teal">
                             ¡Haz espacio para tu transformación!
                         </p>
                     </div>
                 </div>
-                <div class="rounded-lg overflow-hidden h-full flex justify-center items-center">
+                <!-- Orden cambiado para imagen arriba en móvil -->
+                <div class="rounded-lg overflow-hidden flex justify-center items-center order-1 md:order-2">
+                    <!-- Ancho de imagen ajustado para móvil -->
                     <img src="images/2-BANNER-NAU-WEB.webp"
                          alt="Persona meditando al aire libre conectando con su esencia"
-                         class="w-[70%] h-auto object-contain rounded-lg">
+                         class="w-full max-w-md md:w-[70%] h-auto object-contain rounded-lg"
+                         loading="lazy"> <!-- Añadido max-w-md para limitar tamaño en móvil si es necesario -->
                 </div>
             </div>
         </section>
 
-        <!-- Sección Hero 2 MODIFICADA -->
-        <section class="hero-bg bg-custom-dark-teal text-white py-16 md:py-24 px-4 text-center" style="background-image: url('images/3-BANNER-NAU-WEB.webp');">
+        <!-- Sección Hero 2 -->
+        <!-- Padding ajustado -->
+        <section class="hero-bg bg-custom-dark-teal text-white py-12 md:py-16 lg:py-24 px-4 text-center" style="background-image: url('images/3-BANNER-NAU-WEB.webp');">
             <div class="container mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold">No estás solo en este proceso,</h2>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">la transformación no ocurre en soledad.</h2>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">Te acompañamos de cerca. Nuestros especialistas te ayudarán a vivir con más serenidad, propósito y conexión.</p>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">Tu camino es único. Nosotros solo te ayudamos a verlo con más claridad.</p>
-     <button class="bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 transition duration-300">
+                <p class="text-lg mb-4 md:mb-8 max-w-2xl mx-auto">Te acompañamos de cerca. Nuestros especialistas te ayudarán a vivir con más serenidad, propósito y conexión.</p>
+                <p class="text-lg mb-4 md:mb-8 max-w-2xl mx-auto">Tu camino es único. Nosotros solo te ayudamos a verlo con más claridad.</p>
+                <a href="#experiencias" class="inline-block bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 hover:text-custom-dark-teal transition duration-300">
                     Descubre cómo te acompañamos
-                </button>
+                </a>
             </div>
         </section>
 
         <!-- Sección de contenido 2 -->
-        <section class="py-16 px-4 bg-[#b3dddd]">
+        <!-- Padding ajustado -->
+        <section id="experiencias" class="py-12 md:py-16 px-4 bg-custom-pale-teal">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal">Hemos diseñado</h2>
-                <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal mb-12">experiencias y herramientas transformadoras:</h2>
-                <div class="grid md:grid-cols-2 gap-8 mb-8 px-24">
-                    <div class="relative bg-white p-8 rounded-lg shadow-md text-custom-darker-teal">
-                        <img src="images/4-BANNER-NAU-WEB.webp" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-16"> <!-- Ajusta h-16 (altura) si es necesario -->
-                        <h3 class="text-2xl font-semibold mt-8 mb-3 text-custom-darker-teal">ENCUENTROS</h3>
-                        <ul class="list-disc list-inside space-y-1 text-[#143946] text-left pl-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal mb-8 md:mb-12">experiencias y herramientas transformadoras:</h2>
+                <!-- Grid ya responsivo. Padding ajustado. Gap ajustado. -->
+                <div class="grid md:grid-cols-2 gap-12 md:gap-8 mb-8 md:px-8 lg:px-24">
+                    <!-- Añadido padding superior para icono en móvil -->
+                    <div class="relative bg-white p-6 md:p-8 pt-16 md:pt-8 rounded-lg shadow-md text-custom-darker-teal">
+                        <!-- Tamaño icono ajustado para móvil -->
+                        <img src="images/4-BANNER-NAU-WEB.webp" alt="Icono representativo de Encuentros NAU" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-12 md:h-16" loading="lazy">
+                        <h3 class="text-2xl font-semibold mt-4 md:mt-8 mb-3 text-custom-darker-teal">ENCUENTROS</h3>
+                        <!-- Padding lista ajustado -->
+                        <ul class="list-disc list-inside space-y-1 text-custom-darker-teal text-left pl-4 md:pl-12">
                             <li>Trabajar por ti y para ti</li>
                             <li>Retorno a lo femenino y masculino</li>
                             <li>Relación padres e hijos</li>
                             <li>Relaciones de pareja</li>
                         </ul>
                     </div>
-                    <!-- Contenedor 2: Añadir 'relative' e 'img' -->
-                    <div class="relative bg-white p-8 rounded-lg shadow-md text-custom-darker-teal">
-                        <img src="images/4-BANNER-NAU-WEB.webp" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-16"> <!-- Ajusta h-16 (altura) si es necesario -->
-                        <h3 class="text-2xl font-semibold mt-8 mb-3 text-custom-darker-teal">SIMBOLISMO NUMÉRICO</h3>
-                        <ul class="list-disc list-inside space-y-1 text-[#143946] text-left pl-12">
+                     <!-- Añadido padding superior para icono en móvil -->
+                    <div class="relative bg-white p-6 md:p-8 pt-16 md:pt-8 rounded-lg shadow-md text-custom-darker-teal">
+                         <!-- Tamaño icono ajustado para móvil -->
+                        <img src="images/4-BANNER-NAU-WEB.webp" alt="Icono representativo de Simbolismo Numérico NAU" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-12 md:h-16" loading="lazy">
+                        <h3 class="text-2xl font-semibold mt-4 md:mt-8 mb-3 text-custom-darker-teal">SIMBOLISMO NUMÉRICO</h3>
+                         <!-- Padding lista ajustado -->
+                        <ul class="list-disc list-inside space-y-1 text-custom-darker-teal text-left pl-4 md:pl-12">
                             <li>Lección de vida</li>
                             <li>Número del alma</li>
                             <li>Número de personalidad externa</li>
@@ -128,79 +140,95 @@
                         </ul>
                     </div>
                 </div>
-                <h3 class="text-2xl font-semibold mb-3 text-custom-darker-teal">Inicia tu transformación con nosotros.</h3>
-                <button class="bg-[#005366] text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-[#005366] transition duration-300">
+                <h3 class="text-xl md:text-2xl font-semibold mb-3 text-custom-darker-teal">Inicia tu transformación con nosotros.</h3>
+                <a href="#experiencias" class="inline-block bg-custom-dark-teal text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-100 hover:text-custom-dark-teal transition duration-300">
                     Conoce más
-                </button>
+                </a>
             </div>
         </section>
 
         <!-- Sección de contenido 3 -->
-        <section class="py-16 px-4 bg-white">
-             <div class="container mx-auto text-center text-custom-darker-teal mb-12">
+         <!-- Padding ajustado -->
+        <section class="py-12 md:py-16 px-4 bg-white">
+             <!-- Padding título ajustado -->
+             <div class="container mx-auto text-center text-custom-darker-teal mb-8 md:mb-12">
+                <!-- Color cambiado a darker-teal para contraste en fondo blanco -->
                 <h2 class="text-3xl md:text-4xl font-bold text-custom-light-teal">¿Qué pasa si sigues esperando</h2>
-                <h2 class="text-3xl md:text-4xl font-bold text-custom-light-teal mb-12">el momento perfecto?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-light-teal mb-4 md:mb-12">el momento perfecto?</h2>
             </div>
-            <div class="container mx-auto grid md:grid-cols-2 gap-2 items-center px-16">
-                 <!-- Contenedor Izquierdo (Imagen) -->
-                 <div class="bg-white rounded-lg flex justify-end items-center h-64 md:h-80">
+             <!-- Grid ya responsivo. Padding ajustado. Gap ajustado. -->
+            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center px-4 md:px-8 lg:px-16">
+                 <!-- Quitado height fijo. Ajustado flex y padding. -->
+                 <div class="bg-white rounded-lg flex justify-center md:justify-end items-center order-1 md:order-1"> <!-- Orden mantenido -->
+                     <!-- Ajustado scale y max-width -->
                      <img src="images/5-BANNER-NAU-WEB.webp"
-                          alt="Persona mirando reflexivamente hacia el futuro"
-                          class="scale-[.9]">
+                          alt="Persona mirando reflexivamente hacia el futuro" loading="lazy"
+                          class="w-full max-w-sm md:max-w-full md:scale-[.9]"> <!-- max-w-sm en móvil, scale en desktop -->
                 </div>
-                 <!-- Contenedor Derecho (Texto) -->
-                 <div class="bg-white text-custom-darker-teal p-8 rounded-lg text-center flex flex-col justify-center items-start h-64 md:h-80">
-                    <p class="text-xl text-left mb-4">El tiempo sigue pasando. Las mismas dudas, los mismos miedos. La transformación no llega sola, requiere un acto de valentía.</p>
-                    <p class="text-xl text-left mb-6">Hoy puedes elegir soltar lo que te limita y abrirte a una vida más auténtica.</p>
-                    <p class="font-bold text-custom-dark-teal text-2xl text-left mb-4">Atrévete al cambio,</p>
-                    <p class="font-bold text-custom-dark-teal text-2xl text-left">¡EL MOMENTO ES AHORA!</p>
+                 <!-- Quitado height fijo. Ajustado padding y text-align. -->
+                 <div class="bg-white text-custom-darker-teal p-4 md:p-8 rounded-lg text-center md:text-left flex flex-col justify-center items-center md:items-start order-2 md:order-2">
+                    <!-- Tamaño fuente ajustado -->
+                    <p class="text-lg md:text-xl text-center md:text-left mb-4">El tiempo sigue pasando. Las mismas dudas, los mismos miedos. La transformación no llega sola, requiere un acto de valentía.</p>
+                    <p class="text-lg md:text-xl text-center md:text-left mb-6">Hoy puedes elegir soltar lo que te limita y abrirte a una vida más auténtica.</p>
+                    <!-- Tamaño fuente ajustado -->
+                    <p class="font-bold text-custom-dark-teal text-xl md:text-2xl text-center md:text-left mb-2 md:mb-4">Atrévete al cambio,</p>
+                    <p class="font-bold text-custom-dark-teal text-xl md:text-2xl text-center md:text-left">¡EL MOMENTO ES AHORA!</p>
                 </div>
             </div>
         </section>
-    
-        <!-- Sección Hero 3 -->
 
-        <section class="hero-bg bg-custom-medium-teal text-white py-16 md:py-24 px-4 text-center" style="background-image: url('images/6-BANNER-NAU-WEB.webp');">
+        <!-- Sección Hero 3 -->
+        <!-- Padding ajustado -->
+        <section class="hero-bg bg-custom-medium-teal text-white py-12 md:py-16 lg:py-24 px-4 text-center" style="background-image: url('images/6-BANNER-NAU-WEB.webp');">
             <div class="container mx-auto">
                 <p class="text-lg max-w-2xl mx-auto">Imagina vivir sin las cargas del pasado, sin miedo a avanzar. Imagina</p>
                 <p class="text-lg max-w-2xl mx-auto mb-4">despertar cada día en paz contigo, con claridad y propósito.</p>
                 <h2 class="text-3xl md:text-4xl font-bold">Esa vida es posible. La pregunta es:</h2>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">¿estás list@ para comenzarla?</h2>
-     <button class="bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 transition duration-300">
+                <a href="#experiencias" class="inline-block bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 hover:text-custom-dark-teal transition duration-300">
                     Empieza aquí
-                </button>
+                </a>
             </div>
         </section>
 
     </main>
 
-    <!-- Pie de página (NUEVO - Reemplazado según tu solicitud) -->
+    <!-- Pie de página Responsivo -->
     <footer class="bg-custom-light-teal text-custom-darker-teal">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 items-center px-10 bg-custom-darker-teal text-white h-60 p-4">
-            <img src="images/LOGO-FOOTER-NAU-WEB.webp" alt="Logo de Nau" class="md:col-span-1">
-            <div class="md:col-span-1 text-sm">
+        <!-- Grid ya responsivo. Quitado height fijo. Padding ajustado. Gap ajustado. -->
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-start px-4 md:px-10 bg-custom-darker-teal text-white py-12 md:py-10"> <!-- items-start para alinear arriba en móvil -->
+            <!-- Logo centrado en móvil -->
+            <div class="flex justify-center md:justify-start md:col-span-1">
+                 <img src="images/LOGO-FOOTER-NAU-WEB.webp" alt="Logo de Nau" class="h-16 md:h-auto" loading="lazy"> <!-- Altura ajustada -->
+            </div>
+            <!-- Columnas con texto centrado/izquierda en móvil -->
+            <div class="md:col-span-1 text-sm text-center md:text-left">
                 <h2 class="font-semibold mb-2">Contáctanos</h2>
                 <ul>
-                    <!-- Enlace para el número de móvil -->
                     <li>Móvil: <a href="tel:+573005429620" class="hover:underline transition-colors duration-300">+57 300 542 9620</a></li>
-                    <!-- Enlace para el correo electrónico -->
                     <li>Email: <a href="mailto:naufundacion@gmail.com" class="hover:underline transition-colors duration-300">naufundacion@gmail.com</a></li>
                 </ul>
             </div>
-            <div class="md:col-span-1 text-sm">
+            <div class="md:col-span-1 text-sm text-center md:text-left">
                 <h2 class="font-semibold mb-2">Síguenos</h2>
-                <p>Instagram</p> <!-- Asumo que aquí irá un enlace o icono de Instagram -->
-            </div>
-            <div class="md:col-span-1 text-sm flex items-end"> <!-- Ajustado para alinear al final si es necesario -->
                 <ul>
+                    <li><a href="https://www.instagram.com/tu_usuario_instagram/" target="_blank" rel="noopener noreferrer" class="hover:underline">Instagram</a></li> <!-- Reemplaza tu_usuario_instagram -->
+                </ul>
+            </div>
+             <!-- Columna con texto y botón centrados/izquierda en móvil -->
+            <div class="md:col-span-1 text-sm text-center md:text-left flex flex-col items-center md:items-start"> <!-- flex-col para apilar en móvil -->
+                <ul class="space-y-2">
                     <li>Si conectas con nuestro propósito,</li>
                     <li>te invitamos a donar</li>
-                    <li><button class="bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 transition duration-300 mt-2">Dona ahora</button></li> <!-- Añadí un margen superior al botón -->
+                    <li><a href="donar.html" class="inline-block bg-custom-light-teal text-custom-darker-teal font-semibold py-2 px-6 rounded-md hover:bg-opacity-80 hover:text-custom-dark-teal transition duration-300 mt-1">
+                        Dona ahora</a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="text-center text-sm copyright-notice bg-custom-light-teal header-text text-custom-darker-teal font-normal py-4"> <!-- Añadí padding vertical -->
-            © 2025 Fundación Nau. Todos los derechos reservados.
+        <!-- Copyright con padding ajustado -->
+        <div class="text-center text-sm copyright-notice bg-custom-light-teal text-custom-darker-teal font-normal py-3 md:py-4">
+            © 2024 Fundación Nau. Todos los derechos reservados.
         </div>
     </footer>
 </body>
