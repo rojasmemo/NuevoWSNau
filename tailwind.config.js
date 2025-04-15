@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     "./index.html", // Asegúrate que apunta a tu archivo HTML principal
@@ -8,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         // Colores personalizados basados en el boceto (aproximados)
