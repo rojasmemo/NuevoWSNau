@@ -1491,10 +1491,6 @@ select {
     line-height: 2.5rem;
   }
 
-  .md\:text-\[22px\] {
-    font-size: 22px;
-  }
-
   .md\:text-\[35px\] {
     font-size: 35px;
   }
