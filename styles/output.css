@@ -1355,6 +1355,10 @@ select {
     height: auto;
   }
 
+  .md\:max-h-full {
+    max-height: 100%;
+  }
+
   .md\:w-\[70\%\] {
     width: 70%;
   }
