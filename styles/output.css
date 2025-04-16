@@ -1204,6 +1204,10 @@ select {
   line-height: 1.5;
 }
 
+.leading-tight {
+  line-height: 1.25;
+}
+
 .text-custom-dark-teal {
   --tw-text-opacity: 1;
   color: rgb(30 96 106 / var(--tw-text-opacity, 1));
