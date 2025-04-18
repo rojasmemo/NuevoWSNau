@@ -1428,6 +1428,14 @@ select {
     height: 151px;
   }
 
+  .md\:h-\[141px\] {
+    height: 141px;
+  }
+
+  .md\:h-\[131px\] {
+    height: 131px;
+  }
+
   .md\:max-h-full {
     max-height: 100%;
   }
@@ -1644,5 +1652,13 @@ select {
 
   .lg\:pt-20 {
     padding-top: 5rem;
+  }
+
+  .lg\:pb-60 {
+    padding-bottom: 15rem;
+  }
+
+  .lg\:pt-24 {
+    padding-top: 6rem;
   }
 }
