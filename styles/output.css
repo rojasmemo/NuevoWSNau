@@ -1,5 +1,64 @@
 /* styles/input.css (o tu archivo CSS personalizado) */
 
+/* poppins-regular - latin */
+
+@font-face {
+  font-display: swap;
+
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/poppins-v22-latin-regular.ttf') format('truetype');
+
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* poppins-600 - latin */
+
+@font-face {
+  font-display: swap;
+
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/poppins-v22-latin-600.ttf') format('truetype');
+
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* poppins-700 - latin */
+
+@font-face {
+  font-display: swap;
+
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: url('../fonts/poppins-v22-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/poppins-v22-latin-700.ttf') format('truetype');
+
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* Tailwind's base, components, and utilities layers */
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -749,6 +808,8 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+/* Estilos base y reset de Tailwind */
+
 .container {
   width: 100%;
 }
@@ -782,6 +843,8 @@ select {
     max-width: 1536px;
   }
 }
+
+/* Clases de componentes de Tailwind */
 
 .visible {
   visibility: visible;
@@ -1283,6 +1346,8 @@ select {
   transition-duration: 300ms;
 }
 
+/* Utilidades de Tailwind */
+
 .hero-bg {
   background-size: cover;
   /* Cubre el área, mantiene proporción, puede recortar */
@@ -1434,12 +1499,12 @@ select {
     max-width: 70%;
   }
 
-  .md\:max-w-full {
-    max-width: 100%;
-  }
-
   .md\:max-w-\[80\%\] {
     max-width: 80%;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
   }
 
   .md\:scale-\[\.9\] {
