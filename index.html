@@ -44,7 +44,7 @@
 
     <!-- Sección de contenido 1 -->
     <!-- Padding ajustado -->
-    <section class="py-12 md:py-16 px-4 bg-white">
+    <section class="py-12 md:py-16 px-4 md:px-16 bg-white">
       <!-- Grid ya es responsivo (apila en móvil, 2 cols en md+) -->
       <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
         <!-- Cambiado items-start a items-center para mejor alineación vertical -->
@@ -72,11 +72,12 @@
         </div>
         <!-- Orden cambiado para imagen arriba en móvil -->
         <div class="rounded-lg overflow-hidden flex justify-center items-center order-1 md:order-2 px-6 md:px-0">
-          <!-- Ancho de imagen ajustado para móvil -->
-          <img src="images/2-BANNER-NAU-WEB.webp" alt="Persona meditando al aire libre conectando con su esencia"
-            class="w-full max-w-md md:w-[70%] h-auto object-contain rounded-lg" loading="lazy">
-          <!-- Añadido max-w-md para limitar tamaño en móvil si es necesario -->
-        </div>
+               <!-- Ancho de imagen ajustado para móvil y escritorio usando max-width -->
+               <!-- La clase 'flex justify-center' del div padre centra la imagen cuando max-w es menor que el contenedor -->
+               <img src="images/2-BANNER-NAU-WEB.webp" alt="Persona meditando al aire libre conectando con su esencia"
+                 class="w-full max-w-md md:max-w-[80%] h-auto object-contain rounded-lg" loading="lazy">
+               <!-- Añadido max-w-md para limitar tamaño en móvil. md:max-w-[70%] limita en desktop sin forzar un ancho fijo -->
+        </div> 
       </div>
     </section>
 

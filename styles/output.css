@@ -1132,14 +1132,14 @@ select {
   padding-bottom: 0.25rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -1155,11 +1155,6 @@ select {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pb-24 {
@@ -1435,8 +1430,16 @@ select {
     width: auto;
   }
 
+  .md\:max-w-\[70\%\] {
+    max-width: 70%;
+  }
+
   .md\:max-w-full {
     max-width: 100%;
+  }
+
+  .md\:max-w-\[80\%\] {
+    max-width: 80%;
   }
 
   .md\:scale-\[\.9\] {
@@ -1507,6 +1510,11 @@ select {
     padding-right: 2.5rem;
   }
 
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:px-36 {
     padding-left: 9rem;
     padding-right: 9rem;
@@ -1545,11 +1553,6 @@ select {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .md\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   .md\:pb-48 {
