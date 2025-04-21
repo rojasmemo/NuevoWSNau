@@ -1220,6 +1220,11 @@ select {
   padding-bottom: 1rem;
 }
 
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .pb-24 {
   padding-bottom: 6rem;
 }
@@ -1507,6 +1512,10 @@ select {
     max-width: 100%;
   }
 
+  .md\:max-w-none {
+    max-width: none;
+  }
+
   .md\:scale-\[\.9\] {
     --tw-scale-x: .9;
     --tw-scale-y: .9;
@@ -1620,6 +1629,11 @@ select {
     padding-bottom: 2rem;
   }
 
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .md\:pb-48 {
     padding-bottom: 12rem;
   }
@@ -1642,6 +1656,10 @@ select {
 
   .md\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .md\:pr-6 {
+    padding-right: 1.5rem;
   }
 
   .md\:text-left {
