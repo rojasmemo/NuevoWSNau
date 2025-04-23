@@ -14,6 +14,89 @@
   <!-- FIN PRECARGA DE FUENTES -->
 
   <link href="styles/output.css" rel="stylesheet">
+
+  <!-- Estilos para Consultas de Contenedor (Experimento Refinado - v3 - CSS Estándar) -->
+  <style>
+    .card-container {
+      container-type: inline-size;
+      container-name: info-cards;
+    }
+
+    /* --- Breakpoints del Contenedor para .info-card --- */
+
+    /* 1. Estilos para contenedores MUY ESTRECHOS (<= 350px) */
+    @container info-cards (max-width: 350px) {
+      .info-card {
+        /* Equivalente a p-3 pt-6 */
+        padding: 1.5rem 0.75rem 0.75rem 0.75rem; /* top right bottom left */
+      }
+
+      .info-card h3 {
+        /* Equivalente a text-lg mt-1 mb-1 */
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.75rem; /* 28px */
+        margin-top: 0.25rem; /* 4px */
+        margin-bottom: 0.25rem; /* 4px */
+      }
+
+      .info-card>img {
+        /* Equivalente a h-10 */
+        height: 2.5rem; /* 40px */
+      }
+
+      .info-card ul {
+        /* Equivalente a pl-4 */
+        padding-left: 1rem; /* 16px */
+      }
+
+      .info-card ul li {
+        /* Equivalente a text-sm y SIN margen extra */
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.25rem; /* 20px */
+        margin-bottom: 0; /* Aseguramos CERO margen inferior explícito aquí */
+        margin-top: 0; /* Reseteamos margen superior */
+      }
+    }
+
+    /* 2. Estilos para contenedores ESTRECHOS (entre 351px y 500px) */
+    @container info-cards (min-width: 351px) and (max-width: 500px) {
+      .info-card {
+        /* Equivalente a p-4 pt-8 */
+        padding: 2rem 1rem 1rem 1rem; /* top right bottom left */
+      }
+
+      .info-card h3 {
+        /* Equivalente a text-xl mt-2 mb-2 */
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.75rem; /* 28px */
+        margin-top: 0.5rem; /* 8px */
+        margin-bottom: 0.5rem; /* 8px */
+      }
+
+      .info-card>img {
+        /* Equivalente a h-12 */
+        height: 3rem; /* 48px */
+      }
+
+      .info-card ul {
+        /* Equivalente a pl-5 */
+        padding-left: 1.25rem; /* 20px */
+      }
+
+      .info-card ul li {
+        /* Equivalente a text-base y un pequeño espacio inferior (similar a space-y-1) */
+        font-size: 1rem; /* 16px */
+        line-height: 1.5rem; /* 24px */
+        margin-bottom: 0.25rem; /* 4px - Este simula el efecto de space-y-1 */
+        margin-top: 0; /* Reseteamos margen superior */
+      }
+    }
+
+    /* 3. Para contenedores ANCHOS (> 500px) */
+    /* No necesitamos reglas @container aquí. */
+    /* Se aplicarán los estilos base de Tailwind definidos en el HTML */
+
+  </style>
 </head>
 
 <body class="font-sans">
@@ -73,7 +156,7 @@
         <!-- Orden cambiado para imagen arriba en móvil -->
         <div class="rounded-lg overflow-hidden flex justify-center items-center order-1 md:order-2 px-6 md:px-12">
           <!-- images/2-BANNER-NAU-WEB-896w.webp 896w,
-          images/2-BANNER-NAU-WEB-1024w.webp 1024w, 
+          images/2-BANNER-NAU-WEB-1024w.webp 1024w,
           images/2-BANNER-NAU-WEB-1140w.webp 1140w,
           images/2-BANNER-NAU-WEB-1344w.webp 1344w,
           images/2-BANNER-NAU-WEB-1504w.webp 1504w,
@@ -96,10 +179,8 @@
     <section class="hero-bg bg-custom-dark-teal text-white py-12 md:py-16 lg:py-24 px-4 text-center"
       style="background-image: url('images/3-BANNER-NAU-WEB.webp')">
       <div class="container mx-auto px-4 md:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 max-w-2xl mx-auto">
           No estás solo en este proceso,
-        </h2>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
           la transformación no ocurre en soledad.
         </h2>
         <p class="text-lg mb-4 md:mb-8 max-w-2xl mx-auto">
@@ -118,24 +199,21 @@
     </section>
 
     <!-- Sección de contenido 2 -->
-    <!-- Padding ajustado -->
     <section class="py-12 md:py-16 px-4 md:px-16 bg-custom-pale-teal">
       <div class="container mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal mb-12 md:mb-16">
           Hemos diseñado experiencias y herramientas transformadoras:
         </h2>
         <!--  Grid ya responsivo. Padding ajustado. Gap ajustado. -->
-        <div class="grid md:grid-cols-2 gap-12 md:gap-8 mb-8 px-4 md:px-8 lg:px-24">
-          <!-- Añadido padding superior para icono en móvil -->
-          <div class="relative bg-white p-6 md:p-8 pt-8 md:pt-8 rounded-lg shadow-md text-custom-darker-teal">
-            <!-- Tamaño icono ajustado para móvil -->
+        <div class="grid md:grid-cols-2 gap-12 md:gap-8 mb-8 px-4 md:px-8 lg:px-24 card-container">
+          <div class="relative bg-white p-6 md:p-8 pt-8 md:pt-8 rounded-lg shadow-md text-custom-darker-teal info-card">
             <img src="images/4-BANNER-NAU-WEB.webp" alt="Icono representativo de Encuentros NAU"
               class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-12 md:h-16" loading="lazy">
             <h3 class="text-2xl font-semibold mt-4 md:mt-8 mb-3 text-custom-darker-teal">
               ENCUENTROS
             </h3>
-            <!-- Padding lista ajustado -->
-            <ul class="list-disc list-outside space-y-1 text-custom-darker-teal text-left pl-4 md:pl-12">
+            <!-- Eliminado space-y-1 -->
+            <ul class="list-disc list-outside text-custom-darker-teal text-left pl-4 md:pl-12">
               <li>Trabajar por ti y para ti</li>
               <li>Retorno a lo femenino y masculino</li>
               <li>Relación padres e hijos</li>
@@ -143,15 +221,15 @@
             </ul>
           </div>
           <!-- Añadido padding superior para icono en móvil -->
-          <div class="relative bg-white p-6 md:p-8 pt-8 md:pt-8 rounded-lg shadow-md text-custom-darker-teal">
+          <div class="relative bg-white p-6 md:p-8 pt-8 md:pt-8 rounded-lg shadow-md text-custom-darker-teal info-card">
             <!-- Tamaño icono ajustado para móvil -->
             <img src="images/4-BANNER-NAU-WEB.webp" alt="Icono representativo de Simbolismo Numérico NAU"
               class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-12 md:h-16" loading="lazy">
             <h3 class="text-2xl font-semibold mt-4 md:mt-8 mb-3 text-custom-darker-teal">
               SIMBOLISMO NUMÉRICO
             </h3>
-            <!-- Padding lista ajustado -->
-            <ul class="list-disc list-outside space-y-1 text-custom-darker-teal text-left pl-4 md:pl-12">
+            <!-- Padding lista ajustado y eliminado space-y-1 -->
+            <ul class="list-disc list-outside text-custom-darker-teal text-left pl-4 md:pl-12">
               <li>Lección de vida</li>
               <li>Número del alma</li>
               <li>Número de personalidad externa</li>
@@ -222,12 +300,9 @@
     <section class="hero-bg bg-custom-medium-teal text-white py-12 md:py-16 lg:py-24 px-4 text-center"
       style="background-image: url('images/6-BANNER-NAU-WEB.webp')">
       <div class="container mx-auto px-4 md:px-8">
-        <p class="text-lg max-w-2xl mx-auto">
-          Imagina vivir sin las cargas del pasado, sin miedo a avanzar.
-          Imagina
-        </p>
         <p class="text-lg max-w-2xl mx-auto mb-4">
-          despertar cada día en paz contigo, con claridad y propósito.
+          Imagina vivir sin las cargas del pasado, sin miedo a avanzar.
+          Imagina despertar cada día en paz contigo, con claridad y propósito.
         </p>
         <h2 class="text-3xl md:text-4xl font-bold">
           Esa vida es posible. La pregunta es:
