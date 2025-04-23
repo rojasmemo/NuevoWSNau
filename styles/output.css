@@ -939,10 +939,6 @@ select {
   margin-top: 2rem;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
 .block {
   display: block;
 }
@@ -981,10 +977,6 @@ select {
 
 .h-full {
   height: 100%;
-}
-
-.h-10 {
-  height: 2.5rem;
 }
 
 .min-h-\[80px\] {
@@ -1106,12 +1098,6 @@ select {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1189,10 +1175,6 @@ select {
   padding: 1.5rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1258,10 +1240,6 @@ select {
   padding-top: 2rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1297,11 +1275,6 @@ select {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -1369,6 +1342,165 @@ select {
 }
 
 /* Utilidades de Tailwind */
+
+/* === Estilos para Tarjetas con Consultas de Contenedor === */
+
+.card-container {
+  container-type: inline-size;
+  container-name: info-cards;
+  /* Nombre del contenedor */
+  /* Asegúrate de que el contenedor tenga un display adecuado. */
+  /* Si siempre es un grid, puedes poner @apply grid; */
+  /* Si a veces es bloque, @apply block; */
+  /* O dejar que las clases del HTML lo definan (ej. grid md:grid-cols-2) */
+}
+
+.info-card {
+  /* Estilos base que siempre aplican a la tarjeta, si los hubiera */
+  /* Tailwind ya aplica 'relative' en tu HTML, así que no es estrictamente necesario aquí */
+  /* @apply relative; */
+}
+
+/* --- Breakpoints del Contenedor para .info-card --- */
+
+/* 1. Estilos para contenedores MUY ESTRECHOS (<= 350px) */
+
+@container info-cards (max-width: 350px) {
+  .info-card {
+    padding: 0.75rem;
+    padding-top: 1.5rem;
+    /* Padding mínimo */
+  }
+
+  .info-card h3 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    /* Título más pequeño */
+  }
+
+  .info-card > img {
+    /* Icono */
+    height: 2.5rem;
+  }
+
+  .info-card ul {
+    padding-left: 1rem;
+    /* Padding lista */
+  }
+
+  .info-card ul li {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    /* Texto lista pequeño */
+    /* Usamos CSS estándar para márgenes como funcionó antes */
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+/* 2. Estilos para contenedores ESTRECHOS (entre 351px y 500px) */
+
+@container info-cards (min-width: 351px) and (max-width: 500px) {
+  .info-card {
+    padding: 1rem;
+    padding-top: 2rem;
+    /* Padding intermedio */
+  }
+
+  .info-card h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    /* Título mediano */
+  }
+
+  .info-card > img {
+    /* Icono */
+    height: 3rem;
+  }
+
+  .info-card ul {
+    padding-left: 1.25rem;
+    /* Padding lista */
+  }
+
+  .info-card ul li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* Texto lista base */
+    /* Usamos CSS estándar para márgenes */
+    margin-bottom: 0.25rem;
+    /* Espacio vertical pequeño */
+    margin-top: 0;
+  }
+}
+
+/* 3. Para contenedores ANCHOS (> 500px) */
+
+/* Los estilos base de Tailwind aplicados en el HTML se usarán por defecto. */
+
+/* Si quisieras asegurar un margen específico para li aquí también, */
+
+/* podrías añadir una regla @container (min-width: 501px) con CSS estándar: */
+
+/* @container info-cards (min-width: 501px) { */
+
+/*   .info-card ul li { */
+
+/*     margin-bottom: 0.25rem; /* O el valor por defecto deseado */
+
+/*     margin-top: 0; */
+
+/*   } */
+
+/* } */
+
+/* === Fin Estilos para Tarjetas === */
+
+/* === Estilos para Título de Sección con Consultas de Contenedor (Ajustado v2) === */
+
+.section-title-container {
+  container-type: inline-size;
+  container-name: section-title;
+}
+
+/* 1. Título para contenedores MUY ESTRECHOS (<= 450px) */
+
+@container section-title (max-width: 450px) {
+  .section-title-container > h2 {
+    /* Empezamos con text-3xl y margen mb-12 */
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* 2. Título para contenedores MEDIOS (451px a 768px) */
+
+@container section-title (min-width: 451px) and (max-width: 768px) {
+  .section-title-container > h2 {
+    /* Pasamos a text-4xl y margen mb-14 */
+    margin-bottom: 3.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* 3. Título para contenedores ANCHOS (> 768px) */
+
+@container section-title (min-width: 769px) {
+  .section-title-container > h2 {
+    /* Pasamos a text-5xl (o mantenemos 4xl si es suficiente) y margen mb-16 */
+    margin-bottom: 4rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* === Fin Estilos para Título de Sección === */
 
 .hero-bg {
   background-size: cover;

@@ -15,88 +15,6 @@
 
   <link href="styles/output.css" rel="stylesheet">
 
-  <!-- Estilos para Consultas de Contenedor (Experimento Refinado - v3 - CSS Estándar) -->
-  <style>
-    .card-container {
-      container-type: inline-size;
-      container-name: info-cards;
-    }
-
-    /* --- Breakpoints del Contenedor para .info-card --- */
-
-    /* 1. Estilos para contenedores MUY ESTRECHOS (<= 350px) */
-    @container info-cards (max-width: 350px) {
-      .info-card {
-        /* Equivalente a p-3 pt-6 */
-        padding: 1.5rem 0.75rem 0.75rem 0.75rem; /* top right bottom left */
-      }
-
-      .info-card h3 {
-        /* Equivalente a text-lg mt-1 mb-1 */
-        font-size: 1.125rem; /* 18px */
-        line-height: 1.75rem; /* 28px */
-        margin-top: 0.25rem; /* 4px */
-        margin-bottom: 0.25rem; /* 4px */
-      }
-
-      .info-card>img {
-        /* Equivalente a h-10 */
-        height: 2.5rem; /* 40px */
-      }
-
-      .info-card ul {
-        /* Equivalente a pl-4 */
-        padding-left: 1rem; /* 16px */
-      }
-
-      .info-card ul li {
-        /* Equivalente a text-sm y SIN margen extra */
-        font-size: 0.875rem; /* 14px */
-        line-height: 1.25rem; /* 20px */
-        margin-bottom: 0; /* Aseguramos CERO margen inferior explícito aquí */
-        margin-top: 0; /* Reseteamos margen superior */
-      }
-    }
-
-    /* 2. Estilos para contenedores ESTRECHOS (entre 351px y 500px) */
-    @container info-cards (min-width: 351px) and (max-width: 500px) {
-      .info-card {
-        /* Equivalente a p-4 pt-8 */
-        padding: 2rem 1rem 1rem 1rem; /* top right bottom left */
-      }
-
-      .info-card h3 {
-        /* Equivalente a text-xl mt-2 mb-2 */
-        font-size: 1.25rem; /* 20px */
-        line-height: 1.75rem; /* 28px */
-        margin-top: 0.5rem; /* 8px */
-        margin-bottom: 0.5rem; /* 8px */
-      }
-
-      .info-card>img {
-        /* Equivalente a h-12 */
-        height: 3rem; /* 48px */
-      }
-
-      .info-card ul {
-        /* Equivalente a pl-5 */
-        padding-left: 1.25rem; /* 20px */
-      }
-
-      .info-card ul li {
-        /* Equivalente a text-base y un pequeño espacio inferior (similar a space-y-1) */
-        font-size: 1rem; /* 16px */
-        line-height: 1.5rem; /* 24px */
-        margin-bottom: 0.25rem; /* 4px - Este simula el efecto de space-y-1 */
-        margin-top: 0; /* Reseteamos margen superior */
-      }
-    }
-
-    /* 3. Para contenedores ANCHOS (> 500px) */
-    /* No necesitamos reglas @container aquí. */
-    /* Se aplicarán los estilos base de Tailwind definidos en el HTML */
-
-  </style>
 </head>
 
 <body class="font-sans">
@@ -200,8 +118,8 @@
 
     <!-- Sección de contenido 2 -->
     <section class="py-12 md:py-16 px-4 md:px-16 bg-custom-pale-teal">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-custom-darker-teal mb-12 md:mb-16">
+      <div class="container mx-auto text-center section-title-container">
+        <h2 class="font-bold text-custom-darker-teal">
           Hemos diseñado experiencias y herramientas transformadoras:
         </h2>
         <!--  Grid ya responsivo. Padding ajustado. Gap ajustado. -->
